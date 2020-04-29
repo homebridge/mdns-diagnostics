@@ -1,0 +1,28 @@
+{
+  "name": "mdns-diagnostics",
+  "version": "0.0.1",
+  "description": "Test tool to display HAP instances on your network",
+  "main": "mdns-diagnostics.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homebridge/mdns-diagnostics.git"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=10.17.0"
+  },
+  "bin": {
+    "mdns-diagnostics": "mdns-diagnostics.js"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "bonjour-hap": ">=3.5.7"
+  },
+  "author": "NorthernMan54",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/homebridge/mdns-diagnostics/issues"
+  },
+  "homepage": "https://github.com/homebridge/mdns-diagnostics#readme"
+}
