@@ -16,4 +16,5 @@ var browser = bonjour.find({
 setTimeout(function() {
   // debug('Timeout:');
   browser.stop();
+  process.exit(0);
 }, 20 * 1000);
