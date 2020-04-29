@@ -7,7 +7,7 @@ var browser = bonjour.find({
 }, function(result) {
   if (result.txt) {
     for (const address of result.addresses) {
-      console.log("%s, %s,  %s", result.name, result.txt.md, address, result.port);
+      console.log("%s, %s,  %s:%s", result.name, result.txt.md, address, result.port);
     }
   } else {
     console.log("Unsupported device found, skipping", result.name);
