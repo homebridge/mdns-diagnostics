@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
 const os = require("os");
+const process = require("process");
 
 console.log("--------------------");
 console.log("Platform: " + os.platform());
-console.log("Version: " + os.version());
+console.log("NodeJS Version", process.version);
+//  added in v13.11.0
+// console.log("Version: " + os.version());
 console.log("Network information:");
 
 const ifaces = os.networkInterfaces();
