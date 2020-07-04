@@ -24,7 +24,9 @@ for (const [name, infos] of Object.entries(ifaces)) {
       }
     }
 
-    return `${type}: ${info.cidr}`;
+    const suffix = info.internal? " (internal)": "";
+
+    return `${type}: ${info.cidr}${suffix}`;
   });
 }
 
