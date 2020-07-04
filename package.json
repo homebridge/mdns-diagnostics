@@ -1,6 +1,6 @@
 {
   "name": "mdns-diagnostics",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Test tool to display HAP instances on your network",
   "main": "mdns-diagnostics.js",
   "scripts": {},
