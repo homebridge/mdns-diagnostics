@@ -1,0 +1,22 @@
+name: Node-CI
+
+on:
+  create: # Run when tag is created
+
+jobs:
+  publish-npm:
+    # publish only if we are on our own repo, event was 'create' (a tag was created) and the tag starts with "v" (aka version tag)
+    if: github.repository == 'homebridge/mdns-diagnostics' && github.event_name == 'create' && startsWith(github.ref, 'refs/tags/v')
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10 # use the minimum required version
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
